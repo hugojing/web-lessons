@@ -5,7 +5,7 @@
 
 ## 目录
 
-* Lesson 0: [《搭建 Web 开发环境》](https://github.com/hugojing/node-lessons/tree/master/lesson0)
+* Lesson 0: [《搭建 Web 开发环境》](https://github.com/hugojing/web-lessons/tree/master/lesson0)
 
 ## 本课程特点（来自 alsotang/node-lessons 😄）
 
