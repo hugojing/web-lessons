@@ -8,6 +8,8 @@
 
 当在浏览器中访问 http://localhost:8080 时，输出一个页面，在其中点击按钮、派出一只小精灵。
 
+![](https://raw.githubusercontent.com/hugojing/web-lessons/master/lesson2/lesson2.gif)
+
 ## 知识点
 
 1. 学习 Node 项目的初始化
