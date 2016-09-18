@@ -3,8 +3,9 @@ import pokemonGif from 'pokemon-gif'
 const btn = document.getElementsByClassName('btn')[0]
 
 btn.addEventListener('click', () => {
-    console.log('click')
-    const gifUrl = pokemonGif(25)
+    console.log('Clicked!')
+    const randomId = Math.ceil(Math.random() * 721)
+    const gifUrl = pokemonGif(randomId)
     console.log(gifUrl)
     if (gifUrl) {
         const img = document.createElement('img')
