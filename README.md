@@ -9,7 +9,10 @@ Web 缺少一个有趣的教程。隔壁 Node 都有了，我们不能落下~ �
 
 * Lesson 0: [《搭建 Web 开发环境》](https://github.com/hugojing/web-lessons/tree/master/lesson0)
 
-* Lesson 0: [《使用 HTML + CSS + JavaScript 写一个最简单的 Web 页面》](https://github.com/hugojing/web-lessons/tree/master/lesson1)
+* Lesson 1: [《使用 HTML + CSS + JavaScript 写一个最简单的 Web 页面》](https://github.com/hugojing/web-lessons/tree/master/lesson1)
+
+* Lesson 2: [《使用 Babel + Webpack 编写 ECMAScript 2015 代码》](https://github.com/hugojing/web-lessons/tree/master/lesson2)
+
 
 ## 本课程特点（来自 alsotang/node-lessons 😄）
 

@@ -39,17 +39,25 @@
 新建一个文件：`style.css`，编写 CSS 文件：
 
 ```CSS
-body {
-  text-align: center;
-  padding: 20% 0;
-  background-color: #0eb5d2;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 300;
-  color: #fff;
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
 }
-
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
 .btn {
-  outline: none;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    padding: 10px;
+    color: #fff;
+    background: indianred;
 }
 ```
 
