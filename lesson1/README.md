@@ -23,15 +23,13 @@
 <html>
   <head>
     <title>一个最简单的 Web 页面</title>
-    <link rel="stylesheet" href="./style.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="./style.css">
   </head>
   <body>
     <button class="btn">点击一下</button>
     <script src="./main.js" charset="utf-8"></script>
   </body>
 </html>
-
-
 ```
 
 ### 用 CSS 写样式

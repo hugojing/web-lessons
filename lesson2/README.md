@@ -119,7 +119,7 @@ $ npm install --save-dev http-server
 <html>
   <head>
     <title>ES2015 宠物小精灵</title>
-    <link rel="stylesheet" href="./style.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="./style.css">
   </head>
   <body>
     <button class="btn">决定就是你了！</button>
