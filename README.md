@@ -13,6 +13,12 @@ Web 缺少一个有趣的教程。隔壁 Node 都有了，我们不能落下~ �
 
 * Lesson 2: [《使用 Babel + Webpack 编写 ECMAScript 2015 代码》](https://github.com/hugojing/web-lessons/tree/master/lesson2)
 
+* Lesson 3: 《使用 Normalize.css 实现跨浏览器的默认样式保持一致》
+
+* Lesson 4: 《使用 Modernizr 对浏览器进行 HTML5 和 CSS3 功能检测》
+
+* …… （上面的都是前置工具篇，后面应该开始 DOM 操作这样的课程了，暂定为 原生 JS vs. jQuery/sizzle ）
+
 
 ## 本课程特点（来自 alsotang/node-lessons 😄）
 
