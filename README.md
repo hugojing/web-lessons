@@ -1,5 +1,8 @@
 # 《Web 包教不包会》 -- by hugojing
 
+![first-day-of-fall-2016](https://raw.githubusercontent.com/hugojing/web-lessons/master/first-day-of-fall-2016-northern-hemisphere-5139283208830976.2-hp.gif)
+
+图：2016 北半球秋分 / Google Doodles
 
 ## 为啥写这个课程
 
