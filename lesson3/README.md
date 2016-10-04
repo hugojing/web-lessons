@@ -53,7 +53,7 @@ Normalize.css 是一个很小的 CSS 样式表文件。
 
 比如：
 
-1. 简单的在 `dist/index.html` 中用 `<link>` 标签的加载能力引入 CSS 文件：
+ 1.简单的在 `dist/index.html` 中用 `<link>` 标签的加载能力引入 CSS 文件：
 
 ```html
   <head>
@@ -68,7 +68,7 @@ Normalize.css 是一个很小的 CSS 样式表文件。
 
 推荐下面这个：
 
-2. 使用 Webpack 的 CSS 模块加载能力
+ 2.使用 Webpack 的 CSS 模块加载能力
 
 > 上节课说过，Webpack 是一个前端模块加载器 + 打包工具。这里用的就是它前端模块加载功能之一 —— CSS 模块加载。
 
@@ -141,9 +141,11 @@ import pokemonGif from 'pokemon-gif'
 
 ![](https://raw.githubusercontent.com/hugojing/web-lessons/master/lesson3/lesson3.png)
 
-竟然是由 JS 动态地创建 `<style>` 标签来加载的，而且还是两个 <style> 标签！
 
-网络请求虽然少了，直接把 CSS 文件的网络请求数由 2 个降为 0 个。但如果 CSS 文件增多，也意味着更多的 <style> 标签，所以需要改善一下。
+竟然是由 JS 动态地创建 `<style>` 标签来加载的，而且还是两个 `<style>` 标签！
+
+
+网络请求次数虽然少了，但又带来了多个 `<style>` 标签，所以需要改善一下。
 
 
 ### 多个 CSS 文件合并为一个，并输出为独立的 CSS 文件
@@ -198,7 +200,7 @@ plugins: [
 
 查看页面，终于达到了满意的效果：
 
-把 Normalize.css 与自己写的样式文件打包到一块了，节省了不必要的静态资源网络请求次数，又避免走向另一个极端比如“ CSS 打进 JS，JS 为每一个样式表创建一个 <style> 标签” 这样的奇葩做法。
+把 Normalize.css 与自己写的样式文件打包到一块了，节省了不必要的静态资源网络请求次数，又避免走向另一个极端比如“ CSS 打进 JS，JS 为每一个样式表创建一个 `<style>` 标签” 这样的奇葩做法。
 
 > 最后说一句：上一节课很多人反映要系统讲一下 Webpack，我觉得没有太大的必要，尤其对于萌新而言。只能看到冰山一角
 并不是坏事，随着视野的打开慢慢学到 Webpack 的各个部分，比一口吃个大胖子要好。当然，部分人确实有能力，那我推荐直接看：[《一小时包教会 —— webpack 入门指南》](http://www.cnblogs.com/vajoy/p/4650467.html)
