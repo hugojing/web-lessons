@@ -6,7 +6,7 @@
 
 在 JS 文件中编写 ECMAScript 2015 代码，最终打包输出 ES5 代码。
 
-当在浏览器中访问 http://localhost:8080 时，输出一个页面，在其中点击按钮、派出一只小精灵。
+当在浏览器中访问 http://localhost:8080 时，输出一个页面，在其中点击按钮、随机派出一只小精灵。
 
 ![](https://raw.githubusercontent.com/hugojing/web-lessons/master/lesson2/lesson2.gif)
 

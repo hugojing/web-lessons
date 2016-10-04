@@ -1,0 +1,19 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+.btn {
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    padding: 10px;
+    color: #fff;
+    background: indianred;
+}
