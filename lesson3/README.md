@@ -109,6 +109,12 @@ html, body {
 }
 ```
 
+通过 npm 安装 Normalize.css:
+
+```bash
+$ npm i normalize.css --save
+```
+
 修改 `src/main.js` 文件，增加 CSS 文件的引入：
 
 ```js
@@ -118,7 +124,7 @@ import pokemonGif from 'pokemon-gif'
 // ...
 ```
 
-当然也要适时修改 `dist/index.html`，注释掉一行 :
+当然也要适时修改 `dist/index.html`，注释掉一行:
 
 ```html
 <head>
