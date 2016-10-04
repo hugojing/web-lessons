@@ -2,7 +2,7 @@
 
 ## 目标
 
-复制 lesson2 项目 lesson3 项目，在其中修改代码。
+复制 lesson2 项目为 lesson3 项目，在其中修改代码。
 
 在 JS 中引入 CSS 模块，最终打包输出为一个 JS 和 一个 CSS 文件。
 
@@ -29,7 +29,7 @@ html, body {
 }
 ```
 
-为什么要设置 body 的 margin 为 0 ？
+为什么要设置 body 的 margin 为 0 ?
 
 你可以在 Chrome 中浏览上一节课完成的网页，打开 开发者工具 > Elements 查看 body 元素的样式：
 
