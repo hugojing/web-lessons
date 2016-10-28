@@ -1,6 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const ExtractTextPlugin = require("extract-text-webpack-plugin")
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const ROOT_PATH = path.resolve(__dirname)
 const SRC_PATH = path.resolve(ROOT_PATH, 'src')
@@ -9,7 +10,7 @@ const MODULE_PATH = path.resolve(ROOT_PATH, 'node_modules')
 
 const config = {
     entry: {
-        'main': path.resolve(SRC_PATH, 'main'),
+        'main': path.resolve(SRC_PATH, 'main')
     },
     output: {
         path: DIST_PATH,
@@ -26,6 +27,10 @@ const config = {
             {
                 test: /\.css$/,
                 loader: ExtractTextPlugin.extract('style', 'css')
+            },
+            {
+                test: /\.mp3$/,
+                loader: 'url?limit=1024&name=[hash].[ext]'
             }
         ]
     },
@@ -35,11 +40,15 @@ const config = {
             'src'
         ],
         alias: {
-            'pokemon-gif': path.resolve(MODULE_PATH, 'pokemon-gif', 'lib', 'pokemon-gif.js')
+            'modernizr': path.resolve(ROOT_PATH, 'modernizr.js')
         }
     },
     plugins: [
         new ExtractTextPlugin("styles.css"),
+        new HtmlWebpackPlugin({
+            title: 'Modernizr 实战',
+            template: path.resolve(SRC_PATH, 'index.html')
+        }),
         new webpack.optimize.UglifyJsPlugin({
             compress: {
                 warnings: false

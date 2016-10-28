@@ -1,4 +1,4 @@
-# 《 使用 Webpack 加载 CSS + 使用 Normalize.css 实现跨浏览器的默认样式标准化》
+# 《使用 Normalize.css 实现跨浏览器的默认样式标准化》
 
 ## 目标
 
@@ -13,7 +13,8 @@
 ## 知识点
 
 1. 学习使用 Normalize.css
-2. 学习 Webpack 的 CSS 模块加载与打包
+2. 学习 Webpack 的 CSS 模块加载
+3. 学习 Webpack 的打包功能
 
 ## 课程内容
 
@@ -45,7 +46,9 @@ body {   /* user agent stylesheet */
 而且不同浏览器的自带样式还不尽相同，这就需要一个规范化的默认样式表，实现跨浏览器的默认样式保持一致。
 
 
-### 如何使用 Normalize.css
+### Normalize.css 实战
+
+#### style-loader && css-loader
 
 Normalize.css 是一个很小的 CSS 样式表文件。
 
@@ -59,7 +62,7 @@ Normalize.css 是一个很小的 CSS 样式表文件。
   <head>
     <title>ES2015 宠物小精灵</title>
     <link rel="stylesheet" href="./normalize.css">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./main.css">
   </head>
 ```
 
@@ -99,7 +102,7 @@ module: {
 // ...
 ```
 
-剪切 `dist/style.css` 为 `src/style.css`，去掉 `margin: 0` 这一行：
+剪切 `dist/main.css` 为 `src/main.css`，去掉 `margin: 0` 这一行：
 
 ```css
 html, body {
@@ -119,7 +122,7 @@ $ npm i normalize.css --save
 
 ```js
 import 'normalize.css'
-import './style.css'
+import './main.css'
 import pokemonGif from 'pokemon-gif'
 // ...
 ```
@@ -129,7 +132,7 @@ import pokemonGif from 'pokemon-gif'
 ```html
 <head>
   <title>ES2015 宠物小精灵</title>
-  <!-- <link rel="stylesheet" href="./style.css"> -->
+  <!-- <link rel="stylesheet" href="./main.css"> -->
 </head>
 ```
 
@@ -139,8 +142,7 @@ import pokemonGif from 'pokemon-gif'
 
 不过，咱们的两个 CSS 文件都已经打包到 JS 文件中去了，稍稍观察即可发现：
 
-![](https://raw.githubusercontent.com/hugojing/web-lessons/master/lesson3/lesson3.png)
-
+![](./screenshots/1.png)
 
 竟然是由 JS 动态地创建 `<style>` 标签来加载的，而且还是两个 `<style>` 标签！
 
@@ -148,7 +150,9 @@ import pokemonGif from 'pokemon-gif'
 网络请求次数虽然少了，但又带来了多个 `<style>` 标签，所以需要改善一下。
 
 
-### 多个 CSS 文件合并为一个，并输出为独立的 CSS 文件
+#### extract-text-webpack-plugin
+
+extract-text-webpack-plugin 可以将多个 CSS 文件合并为一个，并输出为独立的 CSS 文件。
 
 首先安装插件：
 

@@ -8,7 +8,7 @@
     "build": "webpack -p --progress --hide-modules",
     "serve": "http-server dist"
   },
-  "author": "Hugo",
+  "author": "hugojing",
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.14.0",

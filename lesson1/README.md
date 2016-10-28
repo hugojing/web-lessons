@@ -23,7 +23,7 @@
 <html>
   <head>
     <title>一个最简单的 Web 页面</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./main.css">
   </head>
   <body>
     <button class="btn">点击一下</button>
@@ -34,7 +34,7 @@
 
 ### 用 CSS 写样式
 
-新建一个文件：`style.css`，编写 CSS 文件：
+新建一个文件：`main.css`，编写 CSS 文件：
 
 ```CSS
 html, body {

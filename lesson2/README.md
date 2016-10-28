@@ -8,7 +8,7 @@
 
 当在浏览器中访问 http://localhost:8080 时，输出一个页面，在其中点击按钮、随机派出一只小精灵。
 
-![](https://raw.githubusercontent.com/hugojing/web-lessons/master/lesson2/lesson2.gif)
+![](./screenshots/1.gif)
 
 ## 知识点
 
@@ -121,7 +121,7 @@ $ npm install --save-dev http-server
 <html>
   <head>
     <title>ES2015 宠物小精灵</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./main.css">
   </head>
   <body>
     <button class="btn">决定就是你了！</button>
@@ -132,7 +132,7 @@ $ npm install --save-dev http-server
 
 ### 用 CSS 写样式
 
-新建一个文件：`/dist/style.css`，编写 CSS 文件：
+新建一个文件：`/dist/main.css`，编写 CSS 文件：
 
 ```css
 html, body {

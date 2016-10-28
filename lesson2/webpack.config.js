@@ -12,7 +12,7 @@ const config = {
     },
     output: {
         path: DIST_PATH,
-        filename: 'main.js',
+        filename: 'scripts.js',
         publicPath: '/'
     },
     module: {

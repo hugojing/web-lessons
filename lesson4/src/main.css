@@ -1,0 +1,26 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+.no-audio body {
+    color: #fff;
+    background-color: #000;
+}
+.audio body {
+    color: #000;
+    background-color: whitesmoke;
+}
+.no-audio #music {
+    width: 600px;
+    text-align: left;
+}
+.audio #music {
+    width: 300px;
+    text-align: center;
+}

@@ -1,5 +1,5 @@
 import 'normalize.css'
-import './style.css'
+import './main.css'
 import pokemonGif from 'pokemon-gif'
 
 const btn = document.getElementsByClassName('btn')[0]
