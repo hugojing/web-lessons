@@ -94,7 +94,7 @@ plugins: [
 $ yarn add modernizr  #替代原 npm i modernizr --save
 ```
 
-新增 modernizr CLI 的 generate 命令，可根据指定的 config json 文件生成自订制的 modernizr.js 文件。
+新增 modernizr CLI 的 generate 命令到 package.json ，可根据指定的 config json 文件生成自订制的 modernizr.js 文件。
 
 ```json
 "scripts": {
@@ -124,7 +124,7 @@ alias: {
 ```js
 import 'normalize.css' // 不是合法的 ES2015 Modules 写法，由 babel 转为 `require('normalize.css')`，再由 Webpack 实现 CSS 加载
 import './main.css' // 同上，会转为 `require('normalize.css')
-import musicUrl from './The_End_Of_The_World.mp3' // 同上，会转为 `const musicUrl = require('normalize.css')`
+import musicUrl from './The_End_Of_The_World.mp3' // 同上，会转为 `const musicUrl = require('./The_End_Of_The_World.mp3')`
 ```
 
 代码中的 import(require) 都是 Webpack 接管的，所以 The_End_Of_The_World.mp3 这个音频文件得让 Webpack 来加载它。这就要用到两个新的 loader: `url-loader`和 `file-loader`.
@@ -187,7 +187,7 @@ $ yarn run serve #替代原 npm run serve
 
 ![screenshot1](./screenshots/1.png)
 
-可见，直接加载执行 Modernizr，它不仅挂载了 window.Modernizr, 还依照检测结果给 <html> 标签写入了对应的 CSS class 名，例如 `cookies cors crypto cssall no-backdropfilter audio` 等。这样，开发者就可以写两种 CSS 样式(比如 `.audio body` 与 `.no-audio body`)，以应对两种可能的情况（某一功能的有或无）。
+可见，直接加载执行 Modernizr，它不仅挂载了 window.Modernizr, 还依照检测结果给 `<html>` 标签写入了对应的 CSS class 名，例如 `cookies cors crypto cssall no-backdropfilter audio` 等。这样，开发者就可以写两种 CSS 样式（比如 `.audio body` 与 `.no-audio body`），以应对两种可能的情况（某一功能的有或无）。
 
 于是，这样编写 src/main.css :
 
