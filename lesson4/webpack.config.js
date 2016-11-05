@@ -15,7 +15,7 @@ const config = {
     output: {
         path: DIST_PATH,
         filename: 'scripts.js',
-        publicPath: '/'
+        publicPath: './'
     },
     module: {
         loaders: [

@@ -40,7 +40,7 @@
 使用 Yarn（新的 npm CLI client）初始化项目：
 
 ```bash
-$ yarn init  #替代原 npm init
+$ yarn init  # 替代原 npm init
 ```
 
 沿用上一节课的项目结构，创建需要用到的文件目录。
@@ -48,14 +48,19 @@ $ yarn init  #替代原 npm init
 添加 html-webpack-plugin 到项目：
 
 ```bash
-$ yarn add --dev html-webpack-plugin #替代原 npm i --save-dev html-webpack-plugin
+$ yarn add --dev html-webpack-plugin # 替代原 npm i --save-dev html-webpack-plugin
 ```
 
-添加 Webpack config 如下:
+修改和添加 Webpack config 如下:
 
 ```js
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 // ...
+output: {
+        path: DIST_PATH,
+        filename: 'scripts.js',
+        publicPath: './'  // 由原 / 改为 ./ , 否则 html-webpack-plugin 链接到的 JS/CSS 文件路径不对
+},
 plugins: [
     // ...
     new HtmlWebpackPlugin({
@@ -66,7 +71,9 @@ plugins: [
 ]
 ```
 
-这段配置是说以 src/index.html 为模板，创建一个 title 为 `Modernizr 实战` 的 html 文件，并输出到 output 输出目录。如果一同输出的有 JS 和 CSS 文件，它会自己写好 `script src` 和 `link` 到所输出的 html 文件中。
+这段配置是说以 src/index.html 为模板，创建一个 title 为 `Modernizr 实战` 的 html 文件，并输出到 output 输出目录。
+
+如果一同输出的有 JS 和 CSS 文件，它会自己写好 `<script src>` 和 `<link>` 到所输出的 html 文件中。
 
 新增 src/index.html 文件，编写如下：
 
@@ -91,7 +98,7 @@ plugins: [
 添加 Modernizr CLI 到项目中：
 
 ```bash
-$ yarn add modernizr  #替代原 npm i modernizr --save
+$ yarn add modernizr  # 替代原 npm i modernizr --save
 ```
 
 新增 modernizr CLI 的 generate 命令到 package.json ，可根据指定的 config json 文件生成自订制的 modernizr.js 文件。
@@ -105,7 +112,7 @@ $ yarn add modernizr  #替代原 npm i modernizr --save
 执行 modernizr CLI 的 generate 命令，生成 modernizr.js 文件：
 
 ```bash
-$ yarn run modernizr #替代原 npm run modernizr
+$ yarn run modernizr # 替代原 npm run modernizr
 # Modernizr build saved to xxxxx/lesson4/modernizr.js
 ```
 
@@ -127,7 +134,7 @@ import './main.css' // 同上，会转为 `require('normalize.css')
 import musicUrl from './The_End_Of_The_World.mp3' // 同上，会转为 `const musicUrl = require('./The_End_Of_The_World.mp3')`
 ```
 
-代码中的 import(require) 都是 Webpack 接管的，所以 The_End_Of_The_World.mp3 这个音频文件得让 Webpack 来加载它。这就要用到两个新的 loader: `url-loader`和 `file-loader`.
+代码中的 import(require) 都是 Webpack 接管的，所以 The_End_Of_The_World.mp3 这个音频文件得让 Webpack 来加载它。这就要用到两个新的 loader: `url-loader` 和 `file-loader` .
 
 添加到项目中：
 
@@ -149,7 +156,7 @@ module: {
 },
 ```
 
-> `url?limit=1024&name=[hash].[ext]` 意思是使用 url-loader 来加载，小于 1024k 的打成 Base64，大于的复制文件到 output 输出目录、并命名为 [hash].[ext] 的格式。
+> url?limit=1024&name=[hash].[ext] 意思是使用 url-loader 来加载，小于 1024k 的打成 Base64，大于的复制文件到 output 输出目录、并命名为 [hash].[ext] 的格式。
 
 这样，JS 中 import(require) 一些 mp3 文件的时候，Webpack 就可以按照配置策略进行加载，其返回值为 Base64 值或者 文件的 url.
 
@@ -175,13 +182,13 @@ import 'modernizr' // modernizr 即为 ./modernizr.js
 打包一下：
 
 ```bash
-$ yarn run build #替代原 npm run build
+$ yarn run build # 替代原 npm run build
 ```
 
 然后启动服务：
 
 ```bash
-$ yarn run serve #替代原 npm run serve
+$ yarn run serve # 替代原 npm run serve
 ```
 打开浏览器查看开发者工具，查看 Elements：
 

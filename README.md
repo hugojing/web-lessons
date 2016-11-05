@@ -1,9 +1,9 @@
-# 《Web 包教不包会》 -- by hugojing
+# 《 Web 包教不包会》
 
 [![GitHub version](https://badge.fury.io/gh/hugojing%2Fweb-lessons.svg?style=flat)](https://badge.fury.io/gh/hugojing%2Fweb-lessons)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](http://opensource.org/licenses/MIT "Feel free to contribute.")
 
-![first-day-of-fall-2016](https://raw.githubusercontent.com/hugojing/web-lessons/master/first-day-of-fall-2016-northern-hemisphere-5139283208830976.2-hp.gif)
+![first-day-of-fall-2016](./dist/img/first-day-of-fall-2016-northern-hemisphere-5139283208830976.2-hp.gif)
 
 图：2016 北半球秋分 / Google Doodles
 
@@ -13,15 +13,15 @@ Web 缺少一个有趣的教程。隔壁 Node 都有了，我们不能落下~ �
 
 ## 目录
 
-* Lesson 0: [《搭建 Web 开发环境》](https://github.com/hugojing/web-lessons/tree/master/lesson0)
+* Lesson 0: [搭建 Web 开发环境](https://github.com/hugojing/web-lessons/tree/master/lesson0)
 
-* Lesson 1: [《使用 HTML + CSS + JavaScript 写一个最简单的 Web 页面》](https://github.com/hugojing/web-lessons/tree/master/lesson1)
+* Lesson 1: [使用 HTML + CSS + JavaScript 写一个最简单的 Web 页面](https://github.com/hugojing/web-lessons/tree/master/lesson1)
 
-* Lesson 2: [《使用 Babel + Webpack 编写 ECMAScript 2015 代码》](https://github.com/hugojing/web-lessons/tree/master/lesson2)
+* Lesson 2: [使用 Babel + Webpack 编写 ECMAScript 2015 代码](https://github.com/hugojing/web-lessons/tree/master/lesson2)
 
-* Lesson 3: [《使用 Normalize.css 实现跨浏览器的默认样式标准化》](https://github.com/hugojing/web-lessons/tree/master/lesson3)
+* Lesson 3: [使用 Normalize.css 实现跨浏览器的默认样式标准化](https://github.com/hugojing/web-lessons/tree/master/lesson3)
 
-* Lesson 4: [《使用 Modernizr 对浏览器进行 HTML5 和 CSS3 功能检测》](https://github.com/hugojing/web-lessons/tree/master/lesson4)
+* Lesson 4: [使用 Modernizr 对浏览器进行 HTML5 和 CSS3 功能检测](https://github.com/hugojing/web-lessons/tree/master/lesson4)
 
 * …… （上面的都是前置工具篇，后面应该开始 DOM 操作这样的课程了，暂定为 原生 JS vs. jQuery/sizzle ）
 
