@@ -25,7 +25,7 @@ Web 缺少一个有趣的教程。隔壁 Node 都有了，我们不能落下~ �
 
 * Lesson 5: [使用 JavaScript 进行 DOM 操作](https://github.com/hugojing/web-lessons/tree/master/lesson5)
 
-* Lesson 5: [使用 JavaScript 进行 BOM 操作 (未完成)](https://github.com/hugojing/web-lessons/tree/master/lesson6)
+* Lesson 6: [使用 JavaScript 进行 BOM 操作 (未完成)](https://github.com/hugojing/web-lessons/tree/master/lesson6)
 
 * …… （后面应该是 BOM 和一些常用库的课程了，比如 jQuery/sizzle ）
 
