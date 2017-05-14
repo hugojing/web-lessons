@@ -81,4 +81,53 @@ removeEventListener() | 去除事件监听器
 
 ### DOM 实战
 
-自由试验，通过调用 DOM JS API 改变 DOM 结构、添加 DOM 事件。
+为了方便学习，避免繁琐的配置，我做了一个脚手架 [generator-webpack-babel](https://github.com/hugojing/generator-webpack-babel)，可以用来快速生成项目基础代码。
+
+目前版本 (v1) 是个最小可行产品，仅包含必要的模块加载、开发服务器、打包功能。
+
+安装之后，执行 `yo webpack-babel`，即可在当前目前生成代码。
+
+使用 `yarn run dev` 启动开发服务器，然后在 `src` 目录下进行开发。
+
+> 这里引入一个简单的外部样式库 purecss ，用来美化外观。
+
+#### 改变 DOM 结构
+
+首先，编辑 `src/main.js`，创建两个 DOM 元素：
+
+```js
+const title = document.createElement('h1')
+title.innerText = 'DOM 实战'
+
+const grids = document.createElement('div')
+grids.setAttribute('class', 'pure-g')
+```
+
+然后，可以创建另外一些 DOM 元素，如输入框、按钮、图片等，添加到 `grids` 中，详见代码。
+
+最后，将这两个元素添加到 `src/index.html` 中预设的 `app` 节点下：
+
+```js
+const app = document.getElementById('app')
+app.appendChild(title)
+app.appendChild(grids)
+```
+
+#### 监听 DOM 事件
+
+给 `button` 添加事件监听器，监听 `click` 事件。
+
+当该事件发生时，指定的函数就会执行。代码如下：
+
+```js
+button.addEventListener('click', () => {
+  image.style.transform = 'rotateX(180deg)'
+  setTimeout(() => {
+    image.style.transform = 'rotateX(360deg)'
+  }, 500)
+})
+```
+
+这样，在点击按钮时，图片将以 X 为轴旋转 180°，500ms 后再更改为旋转 360°.
+
+线上效果：https://hugojing.github.io/web-lessons/lesson5/dist

@@ -28,7 +28,7 @@
 
 浏览器无法直接加载 CommonJS 模块，因此还需要 Webpack 来实现 JS 模块加载功能。
 
-> 注意，Webpack 是一个前端模块加载器 + 打包工具。咱们此次只用到它前端模块加载功能之一 —— JS 模块加载。你当然可以选择其他 JS 模块加载器，比如 Browserify。
+> 注意，Webpack 是一个前端模块加载器 + 打包工具。咱们此次只用到它前端模块加载功能之一 —— JS 模块加载。你当然可以选择其他 JS 模块加载器，比如 Browserify。[《一小时包教会 —— webpack 入门指南》](http://www.cnblogs.com/vajoy/p/4650467.html)
 
 将它们安装到 Node 项目中，首先需要初始化一个 Node 项目。
 

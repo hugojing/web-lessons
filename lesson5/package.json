@@ -1,0 +1,43 @@
+{
+  "name": "lesson5",
+  "description": "使用 JavaScript 进行 DOM 操作",
+  "version": "1.0.0",
+  "author": {
+    "name": "hugojing",
+    "email": "toloric@163.com",
+    "url": "https://changshiban.com"
+  },
+  "scripts": {
+    "dev": "webpack-dev-server --inline --config ./build/dev",
+    "dist": "rm -rf ./dist && mkdir ./dist && webpack --config ./build/prod"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^6.7.7",
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-stage-3": "^6.22.0",
+    "cross-env": "^3.2.3",
+    "css-loader": "^0.27.2",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.10.1",
+    "html-webpack-plugin": "^2.28.0",
+    "optimize-css-assets-webpack-plugin": "^1.3.0",
+    "style-loader": "^0.13.2",
+    "uglify-js": "^2.8.0",
+    "uglifyjs-webpack-plugin": "^0.3.1",
+    "url-loader": "^0.5.8",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.2",
+    "webpack-merge": "^4.1.0"
+  },
+  "dependencies": {
+    "normalize.css": "^5.0.0",
+    "purecss": "^0.6.2"
+  },
+  "engines": {
+    "node": ">= 4.0.0",
+    "npm": ">= 3.0.0"
+  }
+}
